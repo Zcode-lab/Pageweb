@@ -1,0 +1,228 @@
+/* =====================================================
+   CodeWithMech - Premium Agency Website
+   style.css (Part 2A)
+====================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --bg:#0A0A0A;
+    --surface:#111111;
+    --primary:#3B82F6;
+    --secondary:#60A5FA;
+    --white:#ffffff;
+    --text:#B8B8B8;
+    --border:rgba(255,255,255,.08);
+    --glass:rgba(255,255,255,.05);
+    --radius:22px;
+    --transition:.35s ease;
+    --container:1200px;
+}
+
+/* ================= RESET ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Inter",sans-serif;
+    background:var(--bg);
+    color:var(--white);
+    overflow-x:hidden;
+    line-height:1.7;
+}
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--primary);
+    border-radius:20px;
+}
+
+/* ================= GLOBAL ================= */
+
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    color:#fff;
+    text-decoration:none;
+}
+
+.section{
+    width:min(var(--container),92%);
+    margin:auto;
+    padding:120px 0;
+}
+
+.section h2{
+    font-size:clamp(2.5rem,5vw,4rem);
+    margin-bottom:20px;
+    font-weight:800;
+}
+
+.section p{
+    color:var(--text);
+    max-width:750px;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    position:fixed;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    width:min(1300px,92%);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 35px;
+    background:rgba(255,255,255,.05);
+    border:1px solid var(--border);
+    backdrop-filter:blur(18px);
+    border-radius:999px;
+    z-index:1000;
+}
+
+.logo{
+    font-size:1.4rem;
+    font-weight:800;
+    letter-spacing:.5px;
+}
+
+nav{
+    display:flex;
+    gap:35px;
+}
+
+nav a{
+    transition:var(--transition);
+    position:relative;
+}
+
+nav a:hover{
+    color:var(--primary);
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:var(--primary);
+    transition:.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* ================= BUTTONS ================= */
+
+.btn{
+    display:inline-block;
+    padding:15px 30px;
+    background:var(--primary);
+    border-radius:999px;
+    font-weight:600;
+    transition:var(--transition);
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 20px 45px rgba(59,130,246,.35);
+}
+
+.btn.outline{
+    background:transparent;
+    border:1px solid var(--primary);
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:150px 5%;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:650px;
+    height:650px;
+    background:var(--primary);
+    filter:blur(180px);
+    opacity:.18;
+    top:-150px;
+    left:-120px;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:550px;
+    height:550px;
+    background:#4F46E5;
+    filter:blur(180px);
+    opacity:.15;
+    right:-120px;
+    bottom:-120px;
+}
+
+.hero-content{
+    max-width:900px;
+    position:relative;
+    z-index:2;
+}
+
+.hero h1{
+    font-size:clamp(3.5rem,8vw,6.5rem);
+    line-height:1.05;
+    font-weight:900;
+    margin-bottom:25px;
+}
+
+.hero span{
+    color:var(--primary);
+}
+
+.hero p{
+    color:var(--text);
+    max-width:700px;
+    margin:auto;
+    font-size:1.15rem;
+}
+
+.hero-buttons{
+    margin-top:45px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
