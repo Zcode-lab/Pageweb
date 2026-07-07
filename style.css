@@ -226,3 +226,277 @@ nav a:hover::after{
     gap:20px;
     flex-wrap:wrap;
 }
+
+/* =====================================================
+   PART 2C - STATS • TESTIMONIALS • FAQ • EXTRA EFFECTS
+====================================================== */
+
+/* ---------- Statistics ---------- */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+    margin-top:60px;
+}
+
+.stat-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    padding:40px;
+
+    text-align:center;
+
+    transition:.35s ease;
+
+    backdrop-filter:blur(15px);
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#3B82F6;
+
+    box-shadow:0 20px 45px rgba(59,130,246,.20);
+
+}
+
+.stat-card h3{
+
+    font-size:3rem;
+
+    color:#3B82F6;
+
+    margin-bottom:10px;
+
+}
+
+.stat-card p{
+
+    color:#b8b8b8;
+
+}
+
+/* ---------- Testimonials ---------- */
+
+.testimonial-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.testimonial{
+
+    background:rgba(255,255,255,.05);
+
+    border:
+
+       /* =====================================================
+   PART 2D - FINAL STYLES
+====================================================== */
+
+/* -----------------------------
+   Section Titles
+----------------------------- */
+
+.section-title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.section-title h2{
+    font-size:clamp(2.8rem,5vw,4.5rem);
+    margin-bottom:15px;
+    font-weight:800;
+}
+
+.section-title p{
+    color:#b8b8b8;
+    max-width:720px;
+    margin:auto;
+}
+
+/* -----------------------------
+   Glass Cards
+----------------------------- */
+
+.glass{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:24px;
+
+}
+
+/* -----------------------------
+   Hover Lift
+----------------------------- */
+
+.hover-lift{
+
+    transition:.4s ease;
+
+}
+
+.hover-lift:hover{
+
+    transform:translateY(-12px);
+
+}
+
+/* -----------------------------
+   Contact
+----------------------------- */
+
+#contact{
+
+    padding-bottom:120px;
+
+}
+
+#contact form{
+
+    max-width:750px;
+
+    margin:auto;
+
+}
+
+#contact button{
+
+    width:100%;
+
+}
+
+/* -----------------------------
+   Footer
+----------------------------- */
+
+footer{
+
+    background:#080808;
+
+    padding:70px 5%;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+footer p{
+
+    color:#888;
+
+    text-align:center;
+
+}
+
+footer a{
+
+    color:#fff;
+
+    transition:.3s;
+
+}
+
+footer a:hover{
+
+    color:#3B82F6;
+
+}
+
+/* -----------------------------
+   Utilities
+----------------------------- */
+
+.text-center{
+    text-align:center;
+}
+
+.mt-2{
+    margin-top:20px;
+}
+
+.mt-3{
+    margin-top:30px;
+}
+
+.mt-5{
+    margin-top:50px;
+}
+
+.mb-5{
+    margin-bottom:50px;
+}
+
+/* -----------------------------
+   Animations
+----------------------------- */
+
+@keyframes floatGlow{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-30px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.05);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+/* CTA Button */
+
+.btn{
+
+animation:pulse 3s infinite;
+
+}
