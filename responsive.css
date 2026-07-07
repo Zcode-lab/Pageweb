@@ -1,1 +1,184 @@
+/* ==========================================
+   CodeWithMech Responsive Styles
+========================================== */
 
+/* Laptop */
+
+@media (max-width:1200px){
+
+.hero h1{
+
+font-size:4.8rem;
+
+}
+
+.section{
+
+padding:100px 5%;
+
+}
+
+}
+
+/* Tablet */
+
+@media (max-width:992px){
+
+.navbar{
+
+padding:18px 25px;
+
+}
+
+nav{
+
+gap:18px;
+
+}
+
+.hero{
+
+padding-top:170px;
+
+}
+
+.hero h1{
+
+font-size:3.8rem;
+
+}
+
+.grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.stats{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.btn{
+
+width:220px;
+
+text-align:center;
+
+}
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+.navbar{
+
+flex-direction:column;
+
+gap:20px;
+
+padding:20px;
+
+border-radius:25px;
+
+}
+
+nav{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.hero{
+
+padding:160px 20px 100px;
+
+}
+
+.hero h1{
+
+font-size:3rem;
+
+}
+
+.hero p{
+
+font-size:1rem;
+
+}
+
+.section h2{
+
+font-size:2.3rem;
+
+}
+
+.grid{
+
+grid-template-columns:1fr;
+
+}
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+.testimonial-grid{
+
+grid-template-columns:1fr;
+
+}
+
+input,
+textarea{
+
+font-size:16px;
+
+}
+
+}
+
+/* Small Phones */
+
+@media (max-width:480px){
+
+.hero h1{
+
+font-size:2.4rem;
+
+}
+
+.logo{
+
+font-size:1.2rem;
+
+}
+
+.section{
+
+padding:80px 20px;
+
+}
+
+.btn{
+
+width:100%;
+
+}
+
+}
