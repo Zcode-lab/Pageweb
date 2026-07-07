@@ -1,0 +1,214 @@
+/* ==========================================
+   CodeWithMech
+   animations.css
+========================================== */
+
+/* Fade Up */
+
+.fade-up{
+    opacity:0;
+    transform:translateY(60px);
+    transition:all .8s ease;
+}
+
+.fade-up.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Fade In */
+
+.fade-in{
+    opacity:0;
+    transition:opacity .8s ease;
+}
+
+.fade-in.active{
+    opacity:1;
+}
+
+/* Zoom */
+
+.zoom{
+    opacity:0;
+    transform:scale(.9);
+    transition:.7s;
+}
+
+.zoom.active{
+    opacity:1;
+    transform:scale(1);
+}
+
+/* Slide Left */
+
+.slide-left{
+    opacity:0;
+    transform:translateX(-80px);
+    transition:.8s;
+}
+
+.slide-left.active{
+    opacity:1;
+    transform:translateX(0);
+}
+
+/* Slide Right */
+
+.slide-right{
+    opacity:0;
+    transform:translateX(80px);
+    transition:.8s;
+}
+
+.slide-right.active{
+    opacity:1;
+    transform:translateX(0);
+}
+
+/* Floating */
+
+.float{
+
+    animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+/* Button Glow */
+
+.btn{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.btn::before{
+
+content:"";
+
+position:absolute;
+
+left:-120%;
+
+top:0;
+
+width:120%;
+
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.3),
+transparent
+);
+
+transition:.8s;
+
+}
+
+.btn:hover::before{
+
+left:120%;
+
+}
+
+/* Card Animation */
+
+.card{
+
+animation:cardFloat 6s ease infinite;
+
+}
+
+@keyframes cardFloat{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-6px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Gradient Animation */
+
+.hero::before{
+
+animation:gradientMove 12s linear infinite alternate;
+
+}
+
+.hero::after{
+
+animation:gradientMove2 10s linear infinite alternate;
+
+}
+
+@keyframes gradientMove{
+
+from{
+
+transform:translate(-20px,-20px);
+
+}
+
+to{
+
+transform:translate(40px,40px);
+
+}
+
+}
+
+@keyframes gradientMove2{
+
+from{
+
+transform:translate(20px,20px);
+
+}
+
+to{
+
+transform:translate(-40px,-40px);
+
+}
+
+}
